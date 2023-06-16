@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    background-color: #F4F5F7;
+}
+
+.vinculos{
+    font-family: 'Anton', sans-serif;
+    color: #FF63AB;
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="banner">
+            <img src="assets/products/banner.png" class="img-fluid">
+          <!-- Código HTML para el banner -->
+        </div>
+      </div>
+    </div>
+    <marquee style="color:#FF63AB; text-shadow:5px 5px 5px #f099e4;" id="marquee">¿Qué vas a pedir hoy?</marquee>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="card">
+          <a [href]="product.url" target="_blank">
+             <img class="card-img-top" src="assets/products/{{product.image}}" alt="{{product.name}}" >
+            </a>      
+             <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <app-footer></app-footer>

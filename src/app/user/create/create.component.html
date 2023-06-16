@@ -1,0 +1,90 @@
+<div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 p-5  d-none d-md-block" >
+      <div class="contents">
+        <img
+          class="triadgif"
+          src="assets/login/login.gif"
+          alt="Triad"
+          height="400px"
+          width="450px"
+        />
+      </div>
+    </div>
+  
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 p-3">
+      <div class="contents2">
+        <div class="logo">
+          <a href="user">
+            <img
+              class="logofooter"
+              href="../"
+              src="assets/login/iconoylogo.png"
+              alt="logo"
+          /></a>
+        </div>
+  
+        <div class="login-container">
+          <div class="login_box">
+            <div class="imputs">
+
+
+                <form (ngSubmit)="createUser()" #createForm="ngForm">
+                <form class="form ml-5 mb-3">
+                  <input type="text" name="username" [(ngModel)]="username" required />
+                  <label class="lbl-nombre">
+                    <span class="text-nomb">Nombre</span>
+                  </label>
+                </form>
+
+                <form class="form ml-5 mb-3">
+                    <input type="text" name="email" [(ngModel)]="email" required />
+                    <label class="lbl-nombre">
+                      <span class="text-nomb">Email</span>
+                    </label>
+                  </form>
+                  <form class="form ml-5 mb-3">
+                    <input type="password" name="password" [(ngModel)]="password" required />
+                    <label class="lbl-nombre">
+                      <span class="text-nomb">Contraseña</span>
+                    </label>
+                  </form>
+
+  
+                <input type="submit" class="btn" value="Create" [disabled]="!createForm.form.valid" />
+              </form>
+
+
+            </div>
+            <div class="demas">
+              <div class="creacion">
+                <a href="login" class="text-decoration-none text-muted">Ya tengo cuenta</a>
+              </div>
+              
+              <hr class="lineaS" />
+              <div class="login_footer">
+                <div class="login_facebook">
+                  <a href=""
+                    ><img
+                      height="40px"
+                      src="assets/user/buscar.png"
+                      alt="facebook"
+                  /></a>
+                </div>
+                <div class="login_google">
+                  <a href=""
+                    ><img
+                      height="40px"
+                      src="assets/user/facebook (2).png"
+                      alt="facebook"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  

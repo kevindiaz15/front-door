@@ -1,0 +1,84 @@
+
+
+<section class="vh-100" style="background-color: #f4f5f7;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+          <div class="card mb-3" style="border-radius: .5rem;">
+            <div class="row g-0">
+
+              <div class="col-md-4 gradient-custom text-center text-white"
+                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                  alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                
+                <i class="far fa-edit mb-5"></i>
+              </div>
+
+              <div class="col-md-8">
+
+                <div class="card-body p-4">
+                  <h6>Mi perfil!</h6>
+                  <hr class="mt-0 mb-4">
+
+                  <div class="row pt-1" *ngIf="!editValue; else editInfo" >
+                    <div class="col-6 mb-3">
+                      <h6>Nombre Completo</h6>
+                      <p class="text-muted">{{userProfile.username}}</p>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <h6>Correo</h6>
+                        <p class="text-muted">{{userProfile.email}}</p>
+                      </div>
+                    
+                  </div>
+
+                  <div class="d-flex justify-content-start">
+                    <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                    <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                    <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                  </div>
+                </div>
+
+                <br>
+                <button (click)="editProfile()">Editar perfil</button>
+
+                <ng-template #editInfo>
+                    <form>
+                        <div>
+                            <label for="">Usuario</label><br>
+                            <input type="text" name="name" [(ngModel)]="userProfile.username">
+                        </div>
+                
+                        <div>
+                            <label for="">Correo</label><br>
+                            <input type="email" name="email" [(ngModel)]="userProfile.email">
+                        </div>
+                
+                        <div>
+                            <label for="">Contraseña</label><br>
+                            <input type="password" name="password" placeholder="Cambiar contraseña" [(ngModel)]="userProfile.password">
+                        </div>
+
+                        <br>
+                        <button (click)="updateProfile()">
+                            Guardar cambios
+                        </button>
+                        <button (click)="cancelUpdate()">
+                            Cancelar
+                        </button>
+                    </form>
+                </ng-template>
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-footerinner></app-footerinner>
+
